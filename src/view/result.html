@@ -1,0 +1,49 @@
+<!--为什么在这里要改变语法为HTML（ASP）而在index.html中没有改 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title><%= htmlWebpackPlugin.options.title %>-埠口集电商平台</title>
+    </head>
+<body>
+    <%= require('html-loader!./layout/nav-simple.html') %>
+    <div class="page-wrap w">
+        <div class="result-con register-success">
+            <h1 class="result-title">恭喜您，注册成功!</h1>
+            <div class="result-content">
+                <a href="./index.html" class="link">返回首页</a>
+                <a href="./user-login.html" class="link">立即登录</a>
+            </div>
+        </div>
+        <div class="result-con pass-reset-success">
+            <h1 class="result-title">恭喜您，密码重置成功!</h1>
+            <div class="result-content">
+                <a href="./index.html" class="link">返回首页</a>
+                <a href="./user-login.html" class="link">立即登录</a>
+            </div>
+        </div>
+        <div class="result-con default-success">
+            <h1 class="result-title">恭喜您，操作成功!</h1>
+            <div class="result-content">
+                <a href="./index.html" class="link">返回首页</a>
+            </div>
+       </div>
+        <div class="result-con cart-add-success">
+            <h1 class="result-title">您的商品已经成功加入购物车!</h1>
+            <div class="result-content">
+                <a href="./index.html" class="link">继续购物</a>
+                <a href="./cart.html" class="link">去购物车查看</a>
+            </div>
+       </div>
+        <div class="result-con payment-success">
+            <h1 class="result-title">您的订单支付成功!</h1>
+            <div class="result-content">
+                <a href="./index.html" class="link">继续购物</a>
+                <a href="./order-detail.html?orderNumber= " class="link" order-number">查看该订单</a>
+                <!-- 查看该订单，即是要通过orderNumeber传给后台来获取订单详情页，然而不同的商品有不同的订单号，那么这里的静态Html就没办法处理了，还是要通过JS来处理 -->
+            </div>
+       </div>
+    </div>
+    <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

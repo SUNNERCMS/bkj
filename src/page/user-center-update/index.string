@@ -1,0 +1,28 @@
+
+    <div class="user-info">
+        <div class="form-line">
+            <span class="label">用户名：</span>
+            <span class="test">{{username}}</span>
+        </div>
+        <div class="form-line">
+            <span class="label">电 话：</span>
+            <input class="input" id="phone" autocomplete="off" value="{{phone}}"> 
+        </div>
+        <div class="form-line">
+            <span class="label">邮 箱：</span>
+            <input class="input" id="email" autocomplete="off" value="{{email}}"> 
+        </div>
+        <div class="form-line">
+            <span class="label">问 题：</span>
+            <input class="input" id="question" autocomplete="off" value="{{question}}"> 
+        </div>
+        <div class="form-line">
+            <span class="label">答 案：</span>
+            <input class="input" id="answer" autocomplete="off" value="{{answer}}"> 
+        </div>
+        <div class="form-line">
+            <span class="btn btn-submit btn-mini">提交</span> 
+        </div>
+    </div>                   
+    <!-- input 不能继承外层的高度和大小，既不能继承父元素class="form-line"的样式 ，
+    所以需要给input单独写样式-->

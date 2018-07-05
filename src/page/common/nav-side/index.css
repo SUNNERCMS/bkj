@@ -1,0 +1,27 @@
+/*
+* @Author: SUNNERCMS
+* @Date:   2018-04-11 15:19:29
+* @Last Modified by:   SUNNERCMS
+* @Last Modified time: 2018-05-06 16:25:32
+*/
+/*侧边栏导航主题*/
+.nav-side{
+    float:left;
+    width:130px;
+    min-height: 100px;/*???*/
+}
+.nav-side .nav-item{
+    line-height: 25px;
+    font-size:13px;
+}
+.nav-side .nav-item .link{
+    color:#888;
+}
+.nav-side .nav-item.active .link{
+    color:#c60023;
+}
+/*导航栏右侧的内容区*/
+.content.with-nav{
+    float:left;
+    width:950px;
+}

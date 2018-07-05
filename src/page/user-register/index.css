@@ -1,0 +1,98 @@
+/*
+* @Author: SUNNERCMS
+* @Date:   2018-04-15 14:50:37
+* @Last Modified by:   SUNNERCMS
+* @Last Modified time: 2018-04-15 14:50:48
+*/
+/*
+* @Author: SUNNERCMS
+* @Date:   2018-04-13 10:33:23
+* @Last Modified by:   SUNNERCMS
+* @Last Modified time: 2018-04-13 14:37:33
+*/
+*{
+    padding:0px;
+    margin:0;
+}
+/*最外层容器*/
+.page-wrap{
+    background: #e72955;
+    padding:40px 0;
+}
+/*表单框整体*/
+.user-con{
+    position:relative;
+    width:400px;
+    background: #fff;
+    margin:auto;
+}
+.user-con .user-title{
+    text-align: center;
+    padding:10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size:18px;
+    font-weight: bold;
+    color:#666;
+}
+.user-con .user-box{
+    padding:20px;
+}
+/*错误提示框*/
+.user-con .user-box .error-item{
+    position:relative;
+    padding:4px 0 4px 40px;/*留白布局，用padding提供图标的位置*/
+    margin-bottom:10px;
+    border:1px solid red;
+    color: red;
+    background: #fde9e9;/*介于白色和红色之间的颜色*/
+    display: none;
+}
+/*错误图标*/
+.user-con .user-box .error-icon{
+    position: absolute;
+    left:14px;
+    top:50%;
+    font-size:14px;
+    margin-top:-7px;/*图标定位后居中*/
+}
+.user-con .user-box .user-item{
+    position: relative;
+    margin-bottom: 20px;
+}
+.user-con .user-box .user-item .user-label{
+    position:absolute;
+    left:1px;/*0->1，下面的输入框设置了1px的border,为了不遮挡*/
+    top:1px;
+    bottom:1px;/*这3个0为了使宽度为40px的图标容器占满父级的左侧，当父元素高度变化时（由input框撑起），这个图标容器高度也会随之变化*/
+    width:40px;
+    line-height: 36px;
+    background: #f3f3f3;
+    font-size: 18px;
+    color:#888;
+    text-align:center;
+    border-right: 1px solid #bdbdbd;
+    
+}
+.user-con .user-box .user-item .user-content{
+    padding:10px 0px 10px 50px;
+    width:308px;
+    height:18px;
+    line-height:18px;
+    font-size:15px;
+    border:1px solid #bdbdbd;
+    outline:none;
+}
+.user-con .user-box .btn-submit{
+    width:100%;
+    text-align: center;
+    padding:3px 0;/*自定义样式覆盖之前的通用样式*/
+    font-size:20px;
+}
+.user-con .user-box .link-item{
+    text-align: right;
+    margin-top:10px;
+}
+.user-con .user-box .link-item .link{
+    margin-left:10px;
+    color:#888;
+}

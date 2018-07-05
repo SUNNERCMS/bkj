@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title><%= htmlWebpackPlugin.options.title %>-埠口集电商平台</title>
+    </head>
+<body>
+    <!-- <%= require('html-loader!./layout/nav-simple.html') %> -->
+    <%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/header.html') %>
+    <div class="crumb">
+        <div class="w">
+            <div class="crumb-con">
+                <a class="link" href="./index.html">MMall</a>
+                <span>></span>
+                <span class="link-text">
+                    <%= htmlWebpackPlugin.options.title %>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrap w">
+        <!-- 收货地址的面板 -->
+        <div class="panel">
+            <h1 class="panel-title">收货地址</h1>
+            <div class="panel-body address-con">
+            <!--放addres-list.string中的文本 -->
+            </div>
+        </div>
+        <!-- 商品清单的面板 -->
+        <div class="panel">
+            <h1 class="panel-title">商品清单</h1>
+            <div class="panel-body product-con">
+            <!--放product-list.string中的文本  -->
+            </div>
+        </div>
+    </div>
+    <!-- 新增地址、编辑地址的结构 -->
+    <div class="modal-wrap">
+    <!--放address-modal.string中的文本  -->
+    </div>
+    <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

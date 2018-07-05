@@ -1,0 +1,23 @@
+{{#list}}
+<!-- 商品列表中的一块构成 -->
+    <li class="p-item">
+        <!-- 图片部分：带详情页跳转 -->
+        <div class="p-img-con">
+            <a class="link" href="./detail.html?productId={{id}}" target="_blank">
+                <img class="p-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}"/>
+            </a>
+        </div>
+        <!-- 价格部分 -->
+        <div class="p-price-con">
+            <span class="p-price">￥{{price}}</span>
+        </div>
+        <!-- 商品简介部分：带详情页跳转 -->
+        <div class="p-name-con">
+            <a class="p-name" href="./detail.html?productId={{id}}" target="_blank">{{name}}</a>
+        </div>
+    </li>
+{{/list}}
+{{^list}}
+    <p class="err-tip">亲~很抱歉，实在找不到您要的商品。</p>
+{{/list}}
+<!-- {{imgeHost}}{{mainImage}} {{name}}{{id}}这些事hogan语法，用于作变量替换，后台返回的数据将在这里替换出来显示-->

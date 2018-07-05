@@ -1,0 +1,39 @@
+/*
+* @Author: SUNNERCMS
+* @Date:   2018-05-17 10:09:47
+* @Last Modified by:   SUNNERCMS
+* @Last Modified time: 2018-05-18 15:51:08
+*/
+.pg-content{
+    text-align: center;
+    color:#333;
+}
+.pg-content .pg-item{
+    display:inline-block;
+    height:36px;
+    line-height: 36px;
+    padding:0 15px;
+    margin:0 2px;
+    border:1px solid #ccc;
+    background:#eee;
+    cursor:pointer;
+    -moz-user-select:none;/*火狐l浏览器私有属性*/
+    -webkit-user-select:none;/*webkit浏览器谷歌、safari*/
+    -ms-user-select:none;/*IE10*/
+    user-select: none;/*不允许选中，做按钮时防止点击过快选中文字*/
+}
+.pg-content .pg-item.disabled{
+    color:#ccc;
+    background: none;
+    cursor:auto;
+}
+.pg-content .pg-item.active{
+    border:1px solid #f6f6f6;
+    background: none;
+    cursor:auto;
+}
+.pg-content .pg-total{
+    margin-left: 10px;
+    background: none;
+    cursor:auto;
+}

@@ -1,0 +1,54 @@
+<!-- 上部：上左+上右 -->
+<div class="intro-wrap">
+    <!-- 上左部分：大图区+小图区 -->
+    <div class="p-img-con">
+        <div class="main-img-con">
+            <img class="main-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}"/>
+        </div>
+        <ul class="p-img-list">
+            <!-- 在hogan中如果想渲染一个索引式数组，可以用{{.}}表示当前的元素-->
+            {{#subImages}}
+            <li class="p-img-item">
+                <img class="p-img" src="{{imageHost}}{{.}}" alt="{{name}}"/>
+            </li>
+            {{/subImages}}
+        </ul>
+    </div>
+    <!-- 上右部分：标题+副标题+条目 -->
+    <div class="p-info-con">
+        <h1 class="p-name">{{name}}</h1>
+        <p class="p-subtitle">{{subtitle}}</p>
+        <div class="p-info-item p-price-con">
+            <span class="label">价格：</span>
+            <span class="info">￥{{price}}</span>
+        </div>
+        <div class="p-info-item">
+            <span class="label">库存：</span>
+            <span class="info">{{stock}}</span>
+        </div>
+        <div class="p-info-item p-count-con">
+            <span class="label">数量：</span>
+            <input class="p-count" value="1" readonly=""/>
+            <span class="p-count-btn plus">+</span>
+            <span class="p-count-btn minus">-</span>
+        </div>
+        <div class="p-info-item">
+            <a class="btn  cart-add">加入购物车</a>
+        </div>
+    </div>
+</div>
+<!-- 下部:小导航条区+展示区 -->
+<div class="detail-wrap">
+    <!-- 小导航条部分:这里只使用了商品详情 -->
+    <div class="detail-tab-con">
+        <ul class="tab-list">
+            <li class="tab-item active">商品详情</li>
+            <li class="tab-item">购买评论</li>
+            <li class="tab-item">专享服务</li>
+        </ul>
+    </div>
+    <div class="detail-con">
+        <!--detail含有文本标签，这里使用{{{纯文本}}} 纯文本类型进行替换-->
+        {{{detail}}}
+    </div>
+</div>

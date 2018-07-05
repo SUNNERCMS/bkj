@@ -1,0 +1,24 @@
+/*
+* @Author: SUNNERCMS
+* @Date:   2018-04-10 10:26:10
+* @Last Modified by:   SUNNERCMS
+* @Last Modified time: 2018-04-10 10:38:29
+*/
+/*由于footer是每个页面都要用到的，
+不需要在footer文件夹中建立index.js，在commom根目录的index.js中引入即可*/
+.footer{
+    padding-bottom:10px;
+}
+.footer .links{
+    text-align:center;
+    color:#666;
+    line-height: 30px;
+}
+.footer .links .link{
+    padding:0 10px;
+}
+.footer .copyright{
+    text-align:center;
+    color:#666;
+    line-height:30px;
+}

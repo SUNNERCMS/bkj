@@ -1,0 +1,138 @@
+/*
+* @Author: SUNNERCMS
+* @Date:   2018-03-27 15:56:22
+* @Last Modified by:   SUNNERCMS
+* @Last Modified time: 2018-05-15 15:42:50
+*/
+
+/*keywords-list*/
+.keywords-list{
+    float:left;
+    width:240px;
+    height: 350px;
+    padding:10px 0;
+    margin-right:10px;
+    background: #666;
+    color:#fff;
+}
+.keywords-list .keywords-item{
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size:14px;
+}
+.keywords-list .keywords-item:hover{
+    background: #999;
+    }
+.keywords-list .keywords-item .link{
+    color:#fff;
+    margin-right: 6px;
+}
+.keywords-list .keywords-item .link:hover{
+    color:#c60023;
+}
+/*banner-con*/
+.banner-con{
+    width:830px; /*定宽的1080px-width240-margin-right10px*/
+    float: left;
+    height:370px;/*height350px+padding:10px 0px*/
+    background: #eee; 
+}
+.banner-con .loading{
+    margin-top: 150px;
+}
+.banner-con .banner-img{
+    width:100%;
+    height: 370px;
+}
+/*banner的前后按钮*/
+.banner-con .banner-arrow{
+    position:absolute;
+    top:160px;
+    width:30px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color:#fff;
+    background: #ccc; /*防止IE8上不显示*/
+    background: rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.banner-con .banner-arrow:hover{
+    background: #aaa; /*防止IE8上不显示*/
+    background: rgba(0,0,0,.5);
+}
+.banner-con .banner-arrow.prev{
+    left: 0px;
+}
+.banner-con .banner-arrow.next{
+    right: 0px;
+}
+
+
+/*floor*/
+.floor-wrap .floor-title{
+    height:50px;
+    line-height: 50px;
+    color: #d58717;
+    font-weight:normal;
+    font-size: 20px;
+    border-bottom: 1px solid #d58717;
+}
+/*更改各楼层标题颜色，使用CSS3的新增伪类*/
+.floor-wrap:nth-child(2) .floor-title{
+    color:#3b838c;
+    border-bottom: 1px solid #3b838c;
+}
+.floor-wrap:nth-child(3) .floor-title{
+    color:#a93931;
+    border-bottom: 1px solid #a93931;
+}
+.floor-wrap:nth-child(4) .floor-title{
+    color:#488bad;
+    border-bottom: 1px solid #488bad;
+}
+.floor-wrap:nth-child(5) .floor-title{
+    color:#641663;
+    border-bottom: 1px solid #641663;
+}
+
+.floor-wrap .floor-list{
+    /*margin-right: -20px;把floor-list撑开到1100px,
+    由于定宽的1080px的overflow：hidden存在，
+    最后一幅图片的marginright20px被隐藏掉了，
+    实际是存在的，不然就是1080px了，那样就放不下五张图片了*/
+    margin-right: -20px;
+    display: inline-block;
+    /*解决的是以下各楼层的标题全部堆积在第一楼图片下*/
+    /*用overflow：hidden也行，我的理解是触发DFC*/
+}
+.floor-wrap .floor-list .floor-item{
+    position: relative;
+    width:200px;
+    height: 220px;
+    margin:15px 20px 15px 0px;
+    float:left;
+    cursor:pointer;
+    background:#fff;/*防止图片加载不出来时，它失去那个位置区域*/
+}
+.floor-wrap .floor-list .floor-item:hover{
+box-shadow: 2px 2px 7px #ddd;
+}
+.floor-wrap .floor-list .floor-item .floor-text{
+    position:absolute;
+    top:12px;
+    left:20px;
+    font-size:16px;
+    color:#555;
+}
+.floor-wrap .floor-list .floor-item .floor-image{
+    position:absolute;
+    right:15px;
+    bottom:10px;
+    width:80%;/*父元素宽度是200px,这里就是160px*/
+    height: 75%;/*父元素宽度是200px,这里就是150px*/
+    border:none;
+    color:#555;
+}

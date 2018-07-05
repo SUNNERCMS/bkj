@@ -1,0 +1,26 @@
+/*
+* @Author: SUNNERCMS
+* @Date:   2018-04-11 21:23:10
+* @Last Modified by:   SUNNERCMS
+* @Last Modified time: 2018-04-12 10:49:24
+*/
+.page-wrap{
+    padding :30px 0;
+    margin-top : 20px;
+    text-align: center;
+    background: #fff;
+}
+.result-con{
+    display: none;
+}
+.result-con .result-title{
+     color: #555;
+}
+.result-con .result-content{
+    margin-top:20px;
+}
+.result-con .result-content .link{
+    padding:5px 10px;
+    border:1px solid #ccc;
+    margin:0 5px;
+}

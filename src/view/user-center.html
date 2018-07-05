@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title><%= htmlWebpackPlugin.options.title %>-埠口集电商平台</title>
+    </head>
+<body>
+    <!-- <%= require('html-loader!./layout/nav-simple.html') %> -->
+    <%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/header.html') %>
+    <!--面包屑导航 -->
+    <div class="crumb">
+        <div class="w">
+            <div class="crumb-con">
+                <a class="link" href="./index.html">MMall</a>
+                <span>></span>
+                <span class="link-text">
+                    <%= htmlWebpackPlugin.options.title %>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrap w">
+        <%= require('html-loader!./layout/nav-side.html') %>
+        <div class="content with-nav">
+            <div class="panel">
+                <div class="panel-title"><%= htmlWebpackPlugin.options.title %></div>
+                <div class="panel-body">
+                   <div class="loading"></div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>
+<!-- 面包屑导航的样式放到了head里，但是HTML要放在页面里，这是因为HTML的加载器功能比较弱，不支持传参的方式加载，所以用html-loader引用时，只能因用静态的，对于这种需要动态的东西，我们只能写在页面里 -->

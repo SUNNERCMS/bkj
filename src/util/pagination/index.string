@@ -1,0 +1,18 @@
+ <!-- pageArray = [],//往其中推入三大项（均是对象型）：上一页，页码，下一页, -->
+
+<div class="pg-content">
+    {{#pageArray}}
+        {{#disabled}}
+            <span class="pg-item disabled" data-value="{{value}}">{{name}}</span>
+        {{/disabled}}
+        {{^disabled}}
+            {{#active}}
+                <span class="pg-item active" data-value="{{value}}">{{name}}</span>
+            {{/active}}
+            {{^active}}
+                <span class="pg-item" data-value="{{value}}">{{name}}</span>
+            {{/active}}
+        {{/disabled}}
+    {{/pageArray}}
+    <span class="pg-total">{{pageNum}}/{{pages}}</span>
+</div>  
