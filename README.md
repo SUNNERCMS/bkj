@@ -1,2 +1,1 @@
-# sunmall-fe
-sunmall
+# 埠口集电商平台项目的开发
