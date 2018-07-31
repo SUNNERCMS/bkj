@@ -32,9 +32,10 @@
         }
     });
 ````
-> 表单提交代码部分：   
+> 表单提交代码部分:   
+将登录表单中的用户名和密码的数据存放到对象`formData`中，然后传给`formValidate(formData)`进行验证。
+> 业务逻辑主线部分: 
 ```js
-<script>
  submit : function(){
         //获取表单内容信息
         var formData={
@@ -58,8 +59,9 @@
             formError.show(validateResult.msg);
         }
     },
-  </script>
 ```
+> 表单提交代码部分:   
+> 将登录表单中的用户名和密码的数据存放到对象`formData`中，然后传给`formValidate(formData)`进行验证。
 ````
 ````
 
