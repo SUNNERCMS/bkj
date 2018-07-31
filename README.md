@@ -33,7 +33,8 @@
     });
 ````
 > 表单提交代码部分：   
-```
+```js
+<script>
  submit : function(){
         //获取表单内容信息
         var formData={
@@ -57,6 +58,7 @@
             formError.show(validateResult.msg);
         }
     },
+  </script>
 ```
 ````
 ````
