@@ -32,10 +32,32 @@
         }
     });
 ````
-表单提交代码部分：   
-````
-
-````
+> 表单提交代码部分：   
+```
+ submit : function(){
+        //获取表单内容信息
+        var formData={
+            username : $.trim($('#username').val()),
+            password : $.trim($('#password').val())
+        },
+        //对表单信息进行验证,此处为表单验证结果
+        validateResult = this.formValidate(formData);
+        //验证成功
+        if(validateResult.status){
+            //提交,用service中的_user.login()接口，将数据，成功操作，失败操作传给后台
+            _user.login(formData,function(res){
+                window.location.href =  _mm.getUrlParam('redirect')||'./index.html';//???'redirect'
+            },function(errMsg){
+                formError.show(errMsg);
+            });
+        }
+        // 验证失败
+        else{
+            //错误提示
+            formError.show(validateResult.msg);
+        }
+    },
+```
 ````
 ````
 
