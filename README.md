@@ -19,7 +19,7 @@
 - 代码逻辑分析：建立页面对象统一处理业务，在这个对象中首先定义`init`初始化方法，初始化绑定事件（登录按钮点击事件+回车提交事件），进行表单提交，表单提交方法中应该包含获取表单信息的函数，表单信息验证的函数，表单信息验证成功或者失败的处理函数。  
 - 主要代码段分析记录:
 > 表单提交的两种方式：  
-````
+````js
     //按钮提交
     $('#submit').click(function(){
         _this.submit();
@@ -32,21 +32,18 @@
         }
     });
 ````
-> 表单提交代码部分:   
-将登录表单中的用户名和密码的数据存放到对象`formData`中，然后传给`formValidate(formData)`进行验证。
 > 业务逻辑主线部分: 
 ```js
  submit : function(){
-        //获取表单内容信息
+                                                           //获取表单内容信息
         var formData={
             username : $.trim($('#username').val()),
             password : $.trim($('#password').val())
         },
-        //对表单信息进行验证,此处为表单验证结果
-        validateResult = this.formValidate(formData);
+        validateResult = this.formValidate(formData);  //对表单信息进行验证,此处为表单验证结果，验证返回的是reslut对象
         //验证成功
         if(validateResult.status){
-            //提交,用service中的_user.login()接口，将数据，成功操作，失败操作传给后台
+                                                 //提交,用service中的_user.login()接口，将数据，成功操作，失败操作传给后台
             _user.login(formData,function(res){
                 window.location.href =  _mm.getUrlParam('redirect')||'./index.html';//???'redirect'
             },function(errMsg){
@@ -60,8 +57,27 @@
         }
     },
 ```
-> 表单提交代码部分:   
-> 将登录表单中的用户名和密码的数据存放到对象`formData`中，然后传给`formValidate(formData)`进行验证。
-````
+> 表单字段验证函数:将登录表单中的用户名和密码的数据存放到对象`formData`中，然后传给`formValidate(formData)`进行验证。
+> 验证结果用result对象缓存返回给`validateResult`，此时`validateResult`就是result对象，包含验证成功与否的标志位和提示信息。
+````js
+    formValidate : function(formData){
+        var result={
+            status  : false,
+            msg     : ''
+        };
+        //如果username栏为空,不能通过验证，显示返回提示信息和satus=false,传入validateResult,其值就是result对象
+        if(!_mm.validate(formData.username,'require')){
+            result.msg = '用户名不能为空';
+            return result;
+        }
+        if(!_mm.validate(formData.password,'require')){
+            result.msg = '密码不能为空';
+            return result;
+        } 
+        //如果验证通过,返回正确提示
+         result.status = true;
+         result.msg    = '验证通过';
+         return result;       //表单信息验证后的结果
+    }
 ````
 
