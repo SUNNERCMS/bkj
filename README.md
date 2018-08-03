@@ -31,7 +31,7 @@
     });
 ````
 > 业务逻辑主线部分: 
-```js
+````js
  submit : function(){
         //获取表单内容信息
         var formData={
@@ -54,9 +54,9 @@
             formError.show(validateResult.msg);
         }
     },
-   ```
+   ````
 > 表单里的错误提示函数：显示和隐藏表单验证没有通过的信息
-```js
+````js
     var formError = {
         show : function(errMsg){
             $('.error-item').show().find('.err-msg').text(errMsg);
@@ -65,7 +65,7 @@
             $('.error-item').hide().find('.err-msg').text('');
         }
     };
-```
+````
 > 表单字段验证函数:将登录表单中的用户名和密码的数据存放到对象`formData`中，然后传给`formValidate(formData)`进行验证。
 > 验证结果用result对象缓存返回给`validateResult`，此时`validateResult`就是result对象，包含验证成功与否的标志位和提示信息。
 ````js
@@ -90,16 +90,16 @@
     }
 ````
 > 字段的非空验证工具函数:
-```js
+````js
 validate : function(value,type){ 
         var value = $.trim(value);//去掉收尾空格
         //非空验证
         if(type==='require'){
             return !!value; //转换为布尔值， 这里返回true
         }
-```
+````
 > 用户登录接口函数:
-```js
+````js
      _user.login(
          formData,      //第一个参数，表单数据
          function(res){    //第二个函数，该函数作为一个整体参数传入，用于工具函数`_mm.request`中的成功回调函数
@@ -121,9 +121,9 @@ var _user={
             error   : reject
         });
     },
-```
-> 
-```js
+````
+> hahahah
+````js
 var _mm ={
     //网络数据请求功能
     request : function(param){
@@ -150,4 +150,4 @@ var _mm ={
             }
         });
     },
-```
+````
