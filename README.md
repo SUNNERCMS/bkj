@@ -103,8 +103,8 @@ validate : function(value,type){
 > 用户登录接口函数:
 ````js
      _user.login(
-         formData,      //第一个参数，表单数据
-         function(res){    //第二个函数，该函数作为一个整体参数传入，用于工具函数`_mm.request`中的成功回调函数
+         formData,          //第一个参数，表单数据
+         function(res){     //第二个函数，该函数作为一个整体参数传入，用于工具函数`_mm.request`中的成功回调函数
                     window.location.href =  _mm.getUrlParam('redirect')||'./index.html';
                 },
          function(errMsg){  //第三个函数，该函数作为一个整体参数传入，用于工具函数`_mm.request`中的失败回调函数
