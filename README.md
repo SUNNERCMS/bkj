@@ -133,7 +133,7 @@ var _mm ={
         $.ajax({
             type     : param.method  || 'get',   //没有参数传值时设置的默认值，短路用法
             url      : param.url     || '',
-            dataType : param.type    || 'json',//错写成了param.data
+            dataType : param.type    || 'json',  //错写成了param.data
             data     : param.data    || '',
             //请求正常并且请求内容也正常时为请求本身成功
             success  : function(res){
