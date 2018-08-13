@@ -116,7 +116,7 @@ var _user={
     //用户登录
     login : function(userInfo,resolve,reject){
         _mm.request({
-            url     : _mm.getServerUrl('/user/login.do'),//???
+            url     : _mm.getServerUrl('/user/login.do'),//
             method  : 'POST',
             data    : userInfo,
             success : resolve,
