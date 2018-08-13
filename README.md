@@ -131,7 +131,7 @@ var _mm ={
     request : function(param){
         var _this=this;
         $.ajax({
-            type     : param.method  || 'get',
+            type     : param.method  || 'get',   //没有参数传值时设置的默认值，短路用法
             url      : param.url     || '',
             dataType : param.type    || 'json',//错写成了param.data
             data     : param.data    || '',
