@@ -1,7 +1,7 @@
 # 埠口集电商平台项目的开发
 ![](https://github.com/SUNNERCMS/bkj/blob/master/src/image/banner/banner1.jpg)  
 
-记录开发过程中的点滴、、、、
+记录开发过程中的点滴、、、
 ## 用户模块开发
 ### 用户模块涉及的页面
 1、登录 2、注册 3、找回密码 4、个人中心 5、修改密码
